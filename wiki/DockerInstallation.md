@@ -1,7 +1,6 @@
 <h1> Docker installation and configuration for Python </h1>
 
 * [ ]  two
-* [ ]  three
-* true
+* [true]  three
 
 [link](www.google.com)
