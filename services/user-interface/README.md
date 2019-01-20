@@ -1,3 +1,2 @@
-# RSPlatform
+# user interface
 
-this is a platform for all remote sensing projects. 
