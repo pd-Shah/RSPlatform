@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  database:
+    build: rsplatform/mongodb/
+    networks:
+      - data_base_bridge
+
+  apiprovider:
+    build: rsplatform/APIProvider/
+    ports:
+      -8080:5000
+    networks:
+      -data_base_bridge
+    volumes:
+      - .:/rsplatform
+
+  networks:
+    data_base_bridge:
+      driver: bridge
