@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="8" x="131" y="120" width="753" height="593" text="Browser&#xA;http://..." measuredWidth="753" measuredHeight="593">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="9" x="146" y="240" width="697" text="ISRC remote sensing portal " measuredWidth="697" measuredHeight="67">
+    <font size="43px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:HLine" id="10" x="136" y="224" width="743" measuredWidth="743" measuredHeight="6"/>
+  <widgets xsi:type="model:VLine" id="11" x="736" y="192" height="26" measuredWidth="6" measuredHeight="26"/>
+  <widgets xsi:type="model:VLine" id="14" x="842" y="192" height="26" measuredWidth="6" measuredHeight="26"/>
+  <widgets xsi:type="model:VLine" id="15" x="784" y="192" height="26" measuredWidth="6" measuredHeight="26"/>
+  <widgets xsi:type="model:Label" id="17" x="696" y="191" text="link" measuredWidth="29" measuredHeight="28">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="18" x="752" y="192" text="link" measuredWidth="29" measuredHeight="28">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="19" x="853" y="191" text="link" measuredWidth="29" measuredHeight="28">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="20" x="800" y="192" text="link" measuredWidth="29" measuredHeight="28">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="21" x="561" y="320" width="336" text="secondary Headline" measuredWidth="336" measuredHeight="39">
+    <font size="24px"/>
+  </widgets>
+  <widgets xsi:type="model:Image" id="22" x="168" y="343" width="345" height="258" measuredWidth="345" measuredHeight="258"/>
+  <widgets xsi:type="model:TextArea" id="23" x="544" y="366" width="289" height="235" text="overview to the portal and what is our goal in this ,here in a paragraph.&#xD;&#xA;&#xD;&#xA;-Fusarium HeadBlight&#xD;&#xA;-Crop Detection&#xD;&#xA;-Evaporative Quantitative" measuredWidth="289" measuredHeight="235">
+    <font bold="false" italic="true"/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="24" x="650" y="496" text="more info" measuredWidth="77" measuredHeight="27">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="14px"/>
+</model:Screen>
