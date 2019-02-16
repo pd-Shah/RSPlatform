@@ -2,7 +2,9 @@
 # then uncomment commented line
 
 From python:3-slim-stretch
-# WORKDIR /rsplatform/APIProvider
+# RUN echo "curdir: " $PWD
+ADD . /rsplatform/APIProvider
+WORKDIR /rsplatform/APIProvider
 # COPY . /APIProvider
-RUN pip install --trusted-host pypi.python.org -r /APIProvider/requirment.txt
-# CMD ["python", "/APIProvider/app.py"]
+RUN pip install --trusted-host pypi.python.org -r requirment.txt
+CMD ["python", "./app.py"]

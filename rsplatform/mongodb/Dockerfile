@@ -1,2 +1,2 @@
-FROM mongo:3-strech
+FROM mongo
 #VOLUME /Mongodb
