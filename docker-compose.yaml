@@ -12,8 +12,22 @@ services:
       - 5000:5000
     networks:
       - database_bridge
+      # test phase
+      # remove later
+      - nginx_bridge
     volumes:
-      - './rsplatform:/rsplatform'
+      - ./rsplatform:/rsplatform
+  nginx:
+    build: rsplatform/nginx/
+    networks:
+      - nginx_bridge
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./rsplatform/nginx/nginx.conf:/etc/nginx/nginx.conf
 networks:
   database_bridge:
+    driver: bridge
+  nginx_bridge:
     driver: bridge
