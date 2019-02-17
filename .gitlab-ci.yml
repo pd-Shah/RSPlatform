@@ -1,0 +1,21 @@
+image: python
+stages:
+  - build
+  - test
+  - deploy
+
+before_script:
+  - echo "before script running..."
+
+APIProvider:
+  stage: build
+  script:
+    - echo "APIProvider build stage is running..."
+
+  stage: test
+    script:
+      - echo "APIProvider test stage is running..."
+
+  stage: deploy
+    script:
+      - echo "APIProvider deploy stage is running..."
