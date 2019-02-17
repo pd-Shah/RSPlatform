@@ -1,3 +1,4 @@
+# by pedram shahsafi <pd.shahsafi@gmail.com>
 image: python
 stages:
   - build
@@ -7,15 +8,15 @@ stages:
 before_script:
   - echo "before script running..."
 
-APIProvider:
+APIProviderTest:
   stage: build
   script:
     - echo "APIProvider build stage is running..."
 
   stage: test
-    script:
-      - echo "APIProvider test stage is running..."
+  script:
+    - echo "APIProvider test stage is running..."
 
   stage: deploy
-    script:
-      - echo "APIProvider deploy stage is running..."
+  script:
+     - echo "APIProvider deploy stage is running..."
