@@ -1,16 +1,19 @@
 import os
-from pymongo import MongoClient
 
 from flask import Flask
+from flask_pymongo import PyMongo
 
 from .resources.user import user_blueprint
+from . import auth
+
+# 1!Ahelloworld
 
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
         SECRET_KEY='dev',
-        #DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
+        MONGO_URI="mongodb://localhost:27017/test"
     )
 
     if test_config is None:
@@ -26,8 +29,8 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    db_client = MongoClient(host="0.0.0.0", port=27017)
     app.register_blueprint(user_blueprint, url_prefix="/api/v1")
+    app.register_blueprint(auth.bp, url_prefix="/auth")
 
     @app.route('/', methods=["GET", ])
     def hello_world():
