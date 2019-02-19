@@ -1,5 +1,6 @@
 from flask import g, Blueprint, request, jsonify, flash
 from werkzeug.security import check_password_hash, generate_password_hash
+from werkzeug.exceptions import abort, BadRequest
 from .mongo import get_db
 
 bp=Blueprint(name="auth", import_name=__name__)
@@ -25,8 +26,8 @@ def register():
                     }
             db.users.insert_one(user)
         if error is None:
-            return jsonify({"status":200, "message":"user registred."})
-        return jsonify(error)
+            return jsonify(status=200, message= "successfull operation."), 200
+        return jsonify(status=400, message=error), 400
 
     elif request.method == "GET":
-        return jsonify("GET /register")
+        return jsonify(status=400, message="send a POST request."), 400
