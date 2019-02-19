@@ -7,30 +7,26 @@ bp=Blueprint(name="auth", import_name=__name__)
 @bp.route("/register", methods=["POST", "GET"])
 def register():
     error = None
+    username = None
+    password = None
+    db = get_db()
     if request.method == "POST":
-        username = request.form["username"]
-        password = request.form["password"]
-
-        db = get_db().db
-
-        if not username :
-            error = "Username is required!"
-        elif not password:
-            error = "password is required!"
-        elif db.users.find({"username":username}) is not None:
-            error = "{} is already taken!".format(username)
-
+        if "username" in request.form and "password" in request.form:
+            username = request.form["username"]
+            password = request.form["password"]
+            if db.users.find_one({"username":username}) is not None:
+                error = "{} is already taken!".format(username)
+        else:
+            error = "Username and password are required!"
         if error is None:
             user = {
                     "username":username,
                     "password":generate_password_hash(password)
                     }
-
-            db.insert_one(user)
-
-        if error is not None:
+            db.users.insert_one(user)
+        if error is None:
             return jsonify({"status":200, "message":"user registred."})
+        return jsonify(error)
 
-        return jsonify(flash(error))
     elif request.method == "GET":
         return jsonify("GET /register")

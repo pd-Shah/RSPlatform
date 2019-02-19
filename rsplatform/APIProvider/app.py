@@ -3,9 +3,7 @@ from pymongo import MongoClient
 
 from flask import Flask
 
-from resources.user import user_blueprint
-
-db_client = MongoClient(host="0.0.0.0", port=27017)
+from engine.resources.user import user_blueprint
 
 app = Flask(__name__)
 app.register_blueprint(user_blueprint, url_prefix="/api/v1")
