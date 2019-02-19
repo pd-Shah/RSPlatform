@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="5" x="248" y="144" width="705" height="569" text="Browser&#xA;http://..." measuredWidth="705" measuredHeight="569" background="#eee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Panel" id="7" x="824" y="196" width="129" height="517" measuredWidth="129" measuredHeight="517" background="#f90"/>
+  <widgets xsi:type="model:Image" id="9" x="824" y="196" width="124" measuredWidth="124" measuredHeight="100"/>
+  <widgets xsi:type="model:TextField" id="11" x="824" y="320" width="129" text="Ticket" measuredWidth="129" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="12" x="824" y="342" width="129" text="Dashboard" measuredWidth="129" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="13" x="824" y="368" width="129" text="Payment" measuredWidth="129" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="14" x="824" y="392" width="129" text="View active sessions" measuredWidth="129" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:List" id="17" x="768" y="216" width="81" height="73" text="Edit profile&#xA;|Log out&#xA;&#xA;" measuredWidth="81" measuredHeight="73">
+    <font/>
+    <items x="0" y="2" width="81" height="21" text="Edit profile"/>
+    <items x="0" y="23" width="81" height="21" text="|Log out"/>
+    <items x="0" y="44" width="81" height="21"/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="22" x="272" y="351" width="161" height="114" measuredWidth="161" measuredHeight="114">
+    <screen xsi:type="model:WidgetGroup" href="assets/Foundation/Buttons.screen#Button"/>
+    <overrides>
+      <widgets ref="20" width="161" height="114" text="Ticket Status"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="28" x="600" y="678" measuredWidth="220" measuredHeight="22">
+    <screen xsi:type="model:WidgetGroup" href="assets/Foundation/Content.screen#Progress%20Success"/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="30" x="456" y="352" height="113" measuredWidth="129" measuredHeight="113">
+    <screen xsi:type="model:WidgetGroup" href="assets/Foundation/Buttons.screen#Success%20Button"/>
+    <overrides>
+      <widgets ref="44" width="129" height="113" text="Payment Status"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="31" x="624" y="356" width="145" height="109" measuredWidth="145" measuredHeight="109">
+    <screen xsi:type="model:WidgetGroup" href="assets/Foundation/Buttons.screen#Alert%20Button"/>
+    <overrides>
+      <widgets ref="52" width="145" height="109" text="Service Status"/>
+    </overrides>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
