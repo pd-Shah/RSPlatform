@@ -12,17 +12,19 @@ stages:
 before_script:
   - echo "before script running..."
 
-APIProviderTest:
+build:
   stage: build
   script:
     - pip install docker-compose
     - docker-compose build
     - docker-compose up -d
 
+test:
   stage: test
   script:
     - echo "APIProvider test stage is running..."
 
+deploy:
   stage: deploy
   script:
      - echo "APIProvider deploy stage is running..."
