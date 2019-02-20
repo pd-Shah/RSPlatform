@@ -1,5 +1,9 @@
 # by pedram shahsafi <pd.shahsafi@gmail.com>
-image: python
+image: docker
+
+services:
+  - docker:dind
+
 stages:
   - build
   - test
@@ -11,7 +15,9 @@ before_script:
 APIProviderTest:
   stage: build
   script:
-    - echo "APIProvider build stage is running..."
+    - pip install docker-compose
+    - docker-compose build
+    - docker-compose up -d
 
   stage: test
   script:
@@ -20,3 +26,4 @@ APIProviderTest:
   stage: deploy
   script:
      - echo "APIProvider deploy stage is running..."
+     - echo "nothing to do right now..."

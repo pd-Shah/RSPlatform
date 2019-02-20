@@ -27,7 +27,7 @@ def create_app(test_config=None):
         pass
 
     app.register_blueprint(user_blueprint, url_prefix="/api/v1")
-    app.register_blueprint(auth.bp, url_prefix="/auth")
+    app.register_blueprint(auth.bp, url_prefix="/api/v1")
 
     @app.route('/', methods=["GET", ])
     def hello_world():
