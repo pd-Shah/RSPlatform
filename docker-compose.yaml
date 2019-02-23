@@ -12,7 +12,6 @@ services:
       - 5000:5000
     networks:
       - database_bridge
-      - nginx_bridge
     volumes:
       - ./rsplatform:/rsplatform
     depends_on:
@@ -30,12 +29,14 @@ services:
       - "database"
   react:
     build: rsplatform/interface/
-    ports: 
+    ports:
       - 3000:3000
-    networks: 
+    networks:
       - nginx_bridge
     volumes:
       - ./rsplatform/interface/:/rsplatform/interface/
+    depends_on:
+      - "apiprovider"
 networks:
   database_bridge:
     driver: bridge
