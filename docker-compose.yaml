@@ -28,6 +28,14 @@ services:
       - ./rsplatform/nginx/nginx.conf:/etc/nginx/nginx.conf
     depends_on:
       - "database"
+  react:
+    build: rsplatform/interface/
+    ports: 
+      - 3000:3000
+    networks: 
+      - nginx_bridge
+    volumes:
+      - ./rsplatform/interface/:/rsplatform/interface/
 networks:
   database_bridge:
     driver: bridge
