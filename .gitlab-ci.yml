@@ -10,7 +10,8 @@ before_script:
   - echo "before script running..."
   - apk update
   - apk upgrade
-  - apk add --no-cache python3 py3-pip docker-compose
+  - apk add --no-cache python3 py3-pip
+  - pip install docker-compose
 build:
   stage: build
   script:
