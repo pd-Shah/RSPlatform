@@ -15,9 +15,8 @@ before_script:
 build:
   stage: build
   script:
-    - apt-get -gg update && apt-get -gg install -y python
+    - apk add --no-cache python py-pip
     - python -V
-    - apk add --no-cache py-pip
     - pip install docker-compose
     - docker-compose build
     - docker-compose up -d
