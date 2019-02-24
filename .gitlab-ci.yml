@@ -8,12 +8,12 @@ stages:
   - deploy
 before_script:
   - echo "before script running..."
+  - apk update
+  - apk upgrade
+  - apk add --no-cache python3 py3-pip docker-compose
 build:
   stage: build
   script:
-    - apk add --no-cache python3 py3-pip
-    - python3 -V
-    - pip3 install docker-compose
     - docker-compose build
     - docker-compose up -d
 test:
