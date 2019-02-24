@@ -21,7 +21,7 @@ test:
   stage: test
   script:
     - echo "testing..."
-    - python3 ./rsplatform/APIProvider/tests/test.py
+    - python3 ./rsplatform/APIProvider/tests/auth_test.py
 deploy:
   stage: deploy
   script:
