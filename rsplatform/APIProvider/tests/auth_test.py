@@ -11,3 +11,6 @@ class AuthTest(unittest.TestCase):
         self.assertFalse(response is None, msg="500 Internal Server Error.")
         print(response.status_code)
         print(response.json())
+
+if __name__ == '__main__':
+    unittest.main()
