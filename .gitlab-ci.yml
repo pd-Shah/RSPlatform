@@ -1,5 +1,8 @@
 # by pedram shahsafi <pd.shahsafi@gmail.com>
-image: python:3
+image: docker
+
+services:
+  - docker:dind
 
 stages:
   - build
@@ -12,6 +15,8 @@ before_script:
 build:
   stage: build
   script:
+    - apt-get -gg update && apt-get -gg install -y python
+    - python -V
     - apk add --no-cache py-pip
     - pip install docker-compose
     - docker-compose build
