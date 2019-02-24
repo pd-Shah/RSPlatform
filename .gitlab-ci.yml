@@ -23,7 +23,8 @@ build:
 test:
   stage: test
   script:
-    - echo "APIProvider test stage is running..."
+    - echo "testing..."
+    - python ./rsplatform/APIProvider/tests/auth_test.py
 
 deploy:
   stage: deploy
