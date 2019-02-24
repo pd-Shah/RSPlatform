@@ -1,8 +1,5 @@
 # by pedram shahsafi <pd.shahsafi@gmail.com>
-image: docker
-
-services:
-  - docker:dind
+image: python:3
 
 stages:
   - build
