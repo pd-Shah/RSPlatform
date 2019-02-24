@@ -7,7 +7,6 @@ ADD . /rsplatform/APIProvider
 WORKDIR /rsplatform/APIProvider
 # COPY . /APIProvider
 RUN pip install --trusted-host pypi.python.org -r requirment.txt
-# CMD ["python", "./app.py"]
 ENV FLASK_APP=engine
 ENV FLASK_ENV=development
 CMD flask run -h "0.0.0.0"
