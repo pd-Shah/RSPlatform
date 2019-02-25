@@ -1,7 +1,7 @@
 import requests
 import unittest
 
-def url(endpoint, url="http://127.0.0.1:5000"):
+def url(endpoint, url="http://172.19.0.3:5000"):
     return (url+endpoint).strip()
 
 class AuthTest(unittest.TestCase):
