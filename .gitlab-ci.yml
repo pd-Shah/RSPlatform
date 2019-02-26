@@ -17,11 +17,11 @@ build:
   script:
     - docker-compose build
     - docker-compose up -d
+    - python3 ./rsplatform/APIProvider/tests/auth_test.py
 test:
   stage: test
   script:
     - echo "testing..."
-    - python3 ./rsplatform/APIProvider/tests/auth_test.py
 deploy:
   stage: deploy
   script:
