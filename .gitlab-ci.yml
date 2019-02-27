@@ -1,7 +1,7 @@
 # by pedram shahsafi <pd.shahsafi@gmail.com>
-image: docker
-services:
-  - docker:dind
+image: debian
+# services:
+#   - docker:dind
 stages:
   - build
   - test
