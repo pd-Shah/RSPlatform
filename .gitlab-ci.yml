@@ -16,8 +16,8 @@ test:
   stage: test
   script:
     - echo "testing..."
-    - apt update
-    - apt upgrade
+    - apt update -y
+    - apt upgrade -y
     - apt add --no-cache python3 py3-pip
     - pip3 install docker-compose
     - docker-compose build
