@@ -2,7 +2,7 @@ import requests
 import unittest
 import os
 
-def url(endpoint, url="apiprovider:5000"):
+def url(endpoint, url="http://0.0.0.0:5000"):
     return (url+endpoint).strip()
 
 class AuthTest(unittest.TestCase):
@@ -13,5 +13,5 @@ class AuthTest(unittest.TestCase):
         print(response.status_code)
         print(response.json())
 
-if __name__ == '__main__':
-    unittest.main()
+# if __name__ == '__main__':
+#     unittest.main()
