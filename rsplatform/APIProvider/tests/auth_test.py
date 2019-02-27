@@ -13,5 +13,5 @@ class AuthTest(unittest.TestCase):
         print(response.status_code)
         print(response.json())
 
-# if __name__ == '__main__':
-#     unittest.main()
+if __name__ == '__main__':
+    unittest.main()
