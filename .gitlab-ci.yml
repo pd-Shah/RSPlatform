@@ -12,16 +12,17 @@ before_script:
   - apk upgrade
   - apk add --no-cache python3 py3-pip
   - pip3 install docker-compose
+  - docker-compose build
+  - docker-compose up -d
 build:
   stage: build
   script:
-    - docker-compose build
-    - docker-compose up -d
-    - python3 ./rsplatform/APIProvider/tests/auth_test.py
+    - echo "build stage"
 test:
   stage: test
   script:
     - echo "testing..."
+    - python3 ./rsplatform/APIProvider/tests/auth_test.py
 deploy:
   stage: deploy
   script:
