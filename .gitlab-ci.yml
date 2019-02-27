@@ -3,28 +3,28 @@ image: docker
 services:
   - docker:dind
 stages:
-  - build
+#  - build
   - test
-  - deploy
+#  - deploy
 before_script:
   - echo "before script running..."
   - apk update
   - apk upgrade
   - apk add --no-cache python3 py3-pip
   - pip3 install docker-compose
-#  - docker-compose build
-#  - docker-compose up -d
-build:
-  stage: build
-  script:
-    - echo "build stage"
+  - docker-compose build
+  - docker-compose up -d
+#build:
+#  stage: build
+#  script:
+#    - echo "build stage"
 test:
   stage: test
   script:
     - echo "testing..."
     - python3 ./rsplatform/APIProvider/tests/auth_test.py
-deploy:
-  stage: deploy
-  script:
-     - echo "APIProvider deploy stage is running..."
-     - echo "nothing to do right now..."
+#deploy:
+#  stage: deploy
+#  script:
+#     - echo "APIProvider deploy stage is running..."
+#     - echo "nothing to do right now..."
