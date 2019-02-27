@@ -1,6 +1,9 @@
 import requests
 import unittest
 import os
+from time import sleep
+
+sleep(300)
 
 def url(endpoint, url="http://localhost:5000"):
     return (url+endpoint).strip()
