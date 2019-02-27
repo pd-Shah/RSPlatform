@@ -22,7 +22,7 @@ test:
     - pip3 install docker-compose
     - docker-compose build
     - docker-compose up -d
-    - python3 ./rsplatform/APIProvider/tests/auth_test.py
+    - python3 ./rsplatform/APIProvider/tests/test.py
 deploy:
   stage: deploy
   script:
