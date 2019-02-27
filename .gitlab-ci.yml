@@ -28,8 +28,6 @@ test:
     - chmod +x /usr/local/bin/docker-compose
     - docker --version
     - docker-compose --version
-    - systemctl status docker
-    - systemclt status docker-compose
     - docker-compose build
     - docker-compose up -d
     - python3 ./rsplatform/APIProvider/tests/test.py
