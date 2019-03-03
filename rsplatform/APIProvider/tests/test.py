@@ -1,5 +1,5 @@
 import unittest
-from .auth_test import AuthTest
+from auth_test import AuthTest
 
 class Test(AuthTest):
     pass

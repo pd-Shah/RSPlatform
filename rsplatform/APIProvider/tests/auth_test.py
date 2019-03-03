@@ -2,7 +2,7 @@ import requests
 import unittest
 import os
 
-def url(endpoint, url="http://localhost:5000"):
+def url(endpoint, url="http://0.0.0.0:5000"):
     return (url+endpoint).strip()
 
 class AuthTest(unittest.TestCase):
